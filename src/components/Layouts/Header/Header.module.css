@@ -1,0 +1,32 @@
+.Header {
+    height: 60px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 4%;
+}
+
+.Nav {
+
+}
+
+.Nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.Nav ul li {
+    padding: 6px;
+}
+
+.Nav ul li a {
+    padding: 6px;
+}
+
+.anchor-link {
+    font-weight: 600;
+}
+
