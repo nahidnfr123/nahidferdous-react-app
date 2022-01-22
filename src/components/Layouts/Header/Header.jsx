@@ -1,23 +1,32 @@
 import React from "react";
-import classes from "./Header.module.css"
+import classes from "./Header.module.scss"
 import {Link} from "react-router-dom";
 
 function Header() {
+    const logo = "Nahid"
+    const links = [
+        {to: '/about', label: 'About'},
+        {to: '/experience', label: 'Experience'},
+        {to: '/work', label: 'Work'},
+        {to: '/contact', label: 'Contact'},
+    ]
+
     return (
-        <header className={classes.Header}>
+        <header className={`${classes.Header} ${classes.Sticky}`}>
             <div>
-                <Link to="/" className="anchor-link">
-                    <pre>"Nahid"</pre>
-                </Link>
+                <Link to="/" className="anchor-link"><span>00.</span>{logo}</Link>
             </div>
             <nav className={classes.Nav}>
                 <ul>
-                    <li><Link to="/" className="anchor-link">Home</Link></li>
-                    <li><Link to="/portfolio" className="anchor-link">Portfolio</Link></li>
-                    <li><Link to="/about" className="anchor-link">About</Link></li>
-                    <li><Link to="/contact" className="anchor-link">Contact Us</Link></li>
+                    {links.map((item, index) => (
+                        <li key={index}>
+                            <Link to={item.to} className="anchor-link">
+                                <span>0{index + 1}.</span>{item.label}
+                            </Link>
+                        </li>
+                    ))}
                     <li>
-                        <button>Resume</button>
+                        <button className={"bordered-button"}>Resume</button>
                     </li>
                 </ul>
             </nav>

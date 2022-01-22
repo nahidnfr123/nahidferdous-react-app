@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
+:root {
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.Header {
+  height: 80px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 4%;
+}
+
+.Header.Sticky {
+  height: 60px;
+  box-shadow: 0 0 20px #01030760;
+}
+
+.Nav {
+
+}
+
+.Nav ul {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.Nav ul li {
+  padding: 6px;
+}
+
+.Nav ul li a {
+  padding: 6px;
+  font-family: var(--font-mono);
+}
+
+.anchor-link {
+  font-weight: 600;
+}
+

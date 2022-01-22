@@ -6,7 +6,7 @@ import {useDarkMode} from "./styles/useDarkMode";
 
 // Page Components
 import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
+import Work from "./pages/Work";
 import Hobbies from "./pages/Hobbies";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
@@ -14,6 +14,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import Lamp from "./components/Layouts/Lamp/Lamp";
+import Experience from "./pages/Experience";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -28,14 +29,15 @@ function App() {
     return (
         <ThemeProvider theme={themeMode}>
             <Container>
-                <Lamp theme={theme} toggleTheme={toggleTheme}/>
                 <GlobalStyles/>
                 <div className="App">
+                    <Lamp theme={theme} toggleTheme={toggleTheme}/>
                     <Routes>
                         <Route path="/" element={<Layout/>}>
                             <Route exact index element={<Home/>}/>
-                            <Route exact path="portfolio" element={<Portfolio/>}/>
-                            <Route path='portfolio/*' element={<Project/>}/>
+                            <Route exact path="experience" element={<Experience/>}/>
+                            <Route exact path="work" element={<Work/>}/>
+                            <Route path='work/*' element={<Project/>}/>
                             <Route exact path="hobbies" element={<Hobbies/>}/>
                             <Route exact path="about" element={<About/>}/>
                             <Route exact path="contact" element={<Contact/>}/>

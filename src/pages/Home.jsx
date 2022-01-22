@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import About from "./About";
-import Portfolio from "./Portfolio";
+import Work from "./Work";
+import Experience from "./Experience";
 import Services from "./Services";
 import Hobbies from "./Hobbies";
 import Contact from "./Contact";
@@ -11,7 +12,8 @@ function Home() {
         <>
             <Banner/>
             <About/>
-            <Portfolio/>
+            <Experience/>
+            <Work/>
             <Services/>
             <Hobbies/>
             <Contact/>
