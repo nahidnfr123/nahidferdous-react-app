@@ -14,4 +14,16 @@
   width: 60px;
 }
 
+#LampContainer {
+  height: 200px;
+  width: 46px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 111;
 
+  .draggable {
+    transform: translateY(200px);
+  }
+}

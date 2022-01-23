@@ -19,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 200ms ease-in-out;
   }
 
+  .Header {
+    background-color: ${(theme) => theme.theme.bodyColor} !important;
+  }
+
   .anchor-link {
     font-size: 14px;
     font-family: var(--font-mono);
